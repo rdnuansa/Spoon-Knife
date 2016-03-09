@@ -14,16 +14,17 @@ public class Main {
 
     public static ArrayList<A> a = new ArrayList<>();
     public static A[] b = new A[3];
+
     public static void main(String[] args) {
-        A a1 = new A();
-        A a2 = new A();
-        A a3 = new A();
+        A a1 = new A("satu");
+        A a2 = new A("dua");
+        A a3 = new A("tiga");
         a.add(a1);
         a.add(a2);
         a.add(a3);
         a.remove(1);
         for (int i = 0; i < a.size(); i++) {
-            System.out.println(a.get(i));
+            System.out.println(a.get(i).getName());
         }
         System.out.println("");
         b[0] = a1;
@@ -31,8 +32,9 @@ public class Main {
         b[2] = a3;
         b[1] = null;
         for (int i = 0; i < b.length; i++) {
-            System.out.println(b[i]);
+            if (b[i] != null) {
+                System.out.println(b[i].getName());
+            }
         }
-        
     }
 }
