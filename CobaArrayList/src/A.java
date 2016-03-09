@@ -9,5 +9,5 @@
  * @author Ryandito
  */
 public class A {
-    
+    private String name;
 }
